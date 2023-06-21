@@ -115,7 +115,7 @@ Funcion ejercicio6
 FinFuncion
 
 
-Funcion ejercicio7
+Funcion Multiplos
 	
 	sumaParesMultiplos <- 0
 	cantidadParesMultiplos <- 0
@@ -164,5 +164,5 @@ Algoritmo sin_titulo
 	presentar()
 	
 	ejercicio6()
-	ejercicio7()
+	Multiplos()
 FinAlgoritmo
