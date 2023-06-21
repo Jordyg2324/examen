@@ -1,0 +1,168 @@
+
+Funcion expresion()
+	Definir  a, b, x Como Entero
+	a = 5; b = 5
+	x = a + a * (a + b)-b * a + (trunc(b/3) - 2 +a*a mod 2)
+	Escribir x
+FinFuncion
+
+
+Funcion ejercicio2
+	Definir n, i, j Como Entero
+	n = 5
+	para i <- 1 hasta n
+		para j <- 1 hasta i Hacer
+			
+			escribir "*" Sin Saltar
+			
+		FinPara
+		Escribir "*"
+	FinPara
+FinFuncion
+
+	
+Funcion presentar()
+	Definir n, m, r Como Entero
+	n = 15; m = 19; r = 1
+	mientras (r <> 0) hacer
+		r= m mod n
+		Escribir "R es> ", r
+		si (r = 0) entonces
+			Escribir "m=", m," n=", n
+		sino
+			Escribir "m1 ",m
+			Escribir "n1 ", n
+			n = m
+			m = r
+			Escribir "m2 ",m
+			Escribir "n2 ", n
+		FinSi
+	FinMientras
+FinFuncion
+
+
+Funcion ejercicio5
+    cantidadParentesis <- 0
+    cantidadOperadores <- 0
+    
+    Leer expresion
+    
+    Mientras expresion no sea igual a punto hacer
+        Para cada caracter en expresion hacer
+            Si caracter es igual a '(' entonces
+                cantidadParentesis <- cantidadParentesis + 1
+            Fin Si
+            
+            Si caracter es igual a ')' entonces
+                cantidadParentesis <- cantidadParentesis - 1
+            Fin Si
+            
+            Si caracter es un operador válido (por ejemplo, +, -, *, /) entonces
+                cantidadOperadores <- cantidadOperadores + 1
+            Fin Si
+        Fin Para
+        
+        Leer expresion
+    Fin Mientras
+    
+    Si cantidadParentesis es igual a cantidadOperadores entonces
+        Imprimir "Hay igual cantidad de paréntesis y operadores"
+    Sino Si cantidadParentesis < cantidadOperadores entonces
+			Imprimir "Hay menos paréntesis que operadores"
+		Sino
+			Imprimir "Hay más paréntesis que operadores"
+		FinSi
+	FinSi
+	
+FinFuncion
+
+
+
+Funcion ejercicio6
+	
+	Escribir ""
+	
+    Escribir "INGRESE EL NOMBRE"
+	Leer nombre
+	Escribir ""
+	
+	Escribir "INGRESE LA EDAD"
+    Leer edad
+	
+    
+    base <- 5
+    
+    Si edad < 18 entonces
+        base <- base + (base * 0.05)   // Incremento del 5% en la base
+        tipo <- "menor de edad"
+    Sino si edad >= 65 entonces
+			base <- base + (base * 0.20)   // Incremento del 20% en la base
+			tipo <- "adulto mayor"
+		Sino
+			base <- base + (base * 0.15)   // Incremento del 15% en la base
+			tipo <- "mayor de edad"
+		FinSi
+		
+		pulsaciones <- (200 - edad) / base
+		
+		Escribir ""
+		Imprimir "Nombre:", nombre
+		Imprimir "Edad:", edad, "años"
+		Imprimir "Tipo:", tipo
+		Imprimir "Pulsaciones por segundo:", pulsaciones
+	FinSi
+	
+FinFuncion
+
+
+Funcion ejercicio7
+	
+	sumaParesMultiplos <- 0
+	cantidadParesMultiplos <- 0
+	cantidadImparesNoMultiplos <- 0
+	
+	serie <- []
+	
+	Leer numero
+	
+	Mientras numero no sea igual a punto Hacer
+		Agregar numero a serie
+		leer numero
+		
+	FinMientras
+	
+	Para Cada elemento en serie Hacer
+		si elemento es par y multiplo de 3 
+			sumaParesMultiplos <- sumaParesMultiplos + elemento
+			cantidadParesMultiplos <- cantidadParesMultiplos + 1
+			
+		FinSi
+		
+		si elemento es impar y no multiplo de  3 
+			cantidadImparesNoMultiplos <- cantidadImparesNoMultiplos + 1
+			
+		FinSi
+		
+		si cantidadParesMultiplos > 0 entonces 
+			promedioParesMultiplos <- sumaParesMultiplos / cantidadParesMultiplos
+		SiNo
+			promedioParesMultiplos <- 0
+		FinSi
+		
+	FinPara
+	
+	Imprimir "Promedio de números pares múltiplos de 3:", promedioParesMultiplos
+    Imprimir "Cantidad de números impares no múltiplos de 3:", cantidadImparesNoMultiplos
+	
+FinFuncion
+
+
+
+Algoritmo sin_titulo
+	expresion()
+	ejercicio2()
+	presentar()
+	
+	ejercicio6()
+	ejercicio7()
+FinAlgoritmo
