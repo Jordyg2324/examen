@@ -1,5 +1,5 @@
 
-Funcion expresion()
+Funcion EJERCICIO2()
 	Definir  a, b, x Como Entero
 	a = 5; b = 5
 	x = a + a * (a + b)-b * a + (trunc(b/3) - 2 +a*a mod 2)
@@ -7,7 +7,7 @@ Funcion expresion()
 FinFuncion
 
 
-Funcion ejercicio2
+Funcion ejercicio3
 	Definir n, i, j Como Entero
 	n = 5
 	para i <- 1 hasta n
@@ -21,7 +21,7 @@ Funcion ejercicio2
 FinFuncion
 
 	
-Funcion presentar()
+Funcion EJERCICIO4()
 	Definir n, m, r Como Entero
 	n = 15; m = 19; r = 1
 	mientras (r <> 0) hacer
@@ -115,7 +115,7 @@ Funcion ejercicio6
 FinFuncion
 
 
-Funcion Multiplos
+Funcion EJERCICIO7
 	
 	sumaParesMultiplos <- 0
 	cantidadParesMultiplos <- 0
@@ -159,10 +159,10 @@ FinFuncion
 
 
 Algoritmo sin_titulo
-	expresion()
-	ejercicio2()
-	presentar()
-	
-	ejercicio6()
-	Multiplos()
+	EJERCICIO2()
+	EJERCICIO3()
+	EJERCICIO4()
+	EJERCICIO5()
+	EJERCICIO6()
+	EJERCICIO7()
 FinAlgoritmo
